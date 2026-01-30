@@ -293,6 +293,12 @@ ifeq ($(CONFIG_KSU_MANUAL_HOOK), y)
     endif
   endif
 
+  ifeq ($(shell grep -q "ksu_vfs_read_hook" $(srctree)/fs/read_write.c; echo $$?),0)
+    $(info -- ksu_vfs_read_hook is incompatible hook)
+    $(info -- Read: https://resukisu.github.io/guide/manual-integrate.html)
+    $(error You should integrate $(REPO_NAME) in your kernel correctly.)
+  endif
+
   ifeq ($(CONFIG_KSU_MANUAL_HOOK_AUTO_INPUT_HOOK), y)
     $(info -- $(REPO_NAME)/manual_hook: You are using input_handler for input hooks.)
   else
