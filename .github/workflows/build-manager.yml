@@ -97,35 +97,24 @@ jobs:
           chmod +x randomizer
           ./randomizer
 
-      - name: Write key
+      - name: Generate Keystore (On the fly)
         if: ${{ github.event_name == 'workflow_dispatch' || ( github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' )) || github.ref_type == 'tag' }}
         run: |
-          if [ ! -z "${{ secrets.KEYSTORE }}" ]; then
+          if [ ! -z "${{ secrets.KEYSTORE_PASSWORD }}" ]; then
+            echo "Generating keystore on the fly..."
+            keytool -genkeypair -v -keystore key.jks -alias vortexsu -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "${{ secrets.KEYSTORE_PASSWORD }}" \
+              -keypass "${{ secrets.KEY_PASSWORD }}" \
+              -dname "CN=VorteX Developer, OU=Dev, O=VorteX, L=Jakarta, ST=Jakarta, C=ID"
             {
               echo KEYSTORE_PASSWORD='${{ secrets.KEYSTORE_PASSWORD }}'
               echo KEY_ALIAS='${{ secrets.KEY_ALIAS }}'
               echo KEY_PASSWORD='${{ secrets.KEY_PASSWORD }}'
               echo KEYSTORE_FILE='key.jks'
             } >> gradle.properties
-            echo "${{ secrets.KEYSTORE }}" | base64 -d > key.jks
-            echo "Keystore written to key.jks"
+            echo "Keystore generated and configured."
           else
-            echo "No KEYSTORE secret found, building without signing."
-          fi
-
-      - name: Verify Keystore
-        if: ${{ github.event_name == 'workflow_dispatch' || ( github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' )) || github.ref_type == 'tag' }}
-        run: |
-          if [ -f "key.jks" ]; then
-            echo "Verifying keystore integrity and password..."
-            keytool -list -v -keystore key.jks -storepass "${{ secrets.KEYSTORE_PASSWORD }}" > /dev/null 2>&1
-            if [ $? -eq 0 ]; then
-              echo "Keystore verified successfully."
-            else
-              echo "ERROR: Keystore password is incorrect or file is corrupted!"
-              echo "Please check your KEYSTORE and KEYSTORE_PASSWORD secrets."
-              exit 1
-            fi
+            echo "No KEYSTORE_PASSWORD secret found, building without signing."
           fi
 
       - name: Setup Java
