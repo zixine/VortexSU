@@ -56,6 +56,11 @@
 #define EXPECTED_HASH_pershoot                                                     \
     "f26471a28031130362bce7eebffb9a0b8afc3095f163ce0c75a309f03b644a1f"
 
+// VorteXSU (Custom Build)
+#define EXPECTED_SIZE_VORTEXSU 0x381
+#define EXPECTED_HASH_VORTEXSU                                                 \
+    "67EEC44718428ADAD14E6A9DCA57822759ABA7E77A8CAD7071F6F6704DF8BB48"
+
 // Dynamic Sign
 #define EXPECTED_SIZE_OTHER 0x300
 #define EXPECTED_HASH_OTHER                                                    \
