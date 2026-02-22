@@ -35,7 +35,8 @@ val androidCmakeVersion by extra("3.22.0+")
 val androidSourceCompatibility = JavaVersion.VERSION_21
 val androidTargetCompatibility = JavaVersion.VERSION_21
 val managerVersionCode by extra(30000 + getGitCommitCount() + 700)
-val managerVersionName by extra(getGitDescribe())
+// Fixed: Changed from getGitDescribe() to static "v1.0.0" to shorten version name
+val managerVersionName by extra("v1.0.0")
 
 fun getGitCommitCount(): Int {
     return providers.exec {
