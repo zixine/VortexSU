@@ -215,7 +215,8 @@ private fun monitorDownload(
 }
 
 fun checkNewVersion(): LatestVersionInfo {
-    val url = "https://api.github.com/repos/ShirkNeko/SukiSU-Ultra/releases/latest"
+    // Fixed: Point update check to VortexSU repository to stop false update alerts
+    val url = "https://api.github.com/repos/Kingfinik98/VortexSU/releases/latest"
     val defaultValue = LatestVersionInfo()
     return runCatching {
         val client = okhttp3.OkHttpClient.Builder()
@@ -256,7 +257,8 @@ fun checkNewVersion(): LatestVersionInfo {
                 val name = asset.getString("name")
                 if (!name.endsWith(".apk")) continue
 
-                val regex = Regex("SukiSU.*_(\\d+)-release")
+                // Fixed: Regex updated to match VortexSU APK naming convention
+                val regex = Regex("VortexSU.*_(\\d+)-release")
                 val matchResult = regex.find(name)
                 if (matchResult == null) {
                     Log.d("CheckUpdate", "No matches found: $name, skip over")
