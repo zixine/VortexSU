@@ -776,7 +776,7 @@ private fun ModuleList(
 
         val request = okhttp3.Request.Builder()
             .url(changelogUrl)
-            .header("User-Agent", "SukiSU-Ultra/2.0")
+            .header("User-Agent", "VortexSU/2.0")
             .build()
 
         val changelogResult = loadingDialog.withLoading {

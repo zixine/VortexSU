@@ -21,7 +21,7 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 
 private const val TAG = "DownloadUtil"
-private val CUSTOM_USER_AGENT = "SukiSU-Ultra/2.0 (Linux; Android ${Build.VERSION.RELEASE}; ${Build.MODEL})"
+private val CUSTOM_USER_AGENT = "VortexSU/2.0 (Linux; Android ${Build.VERSION.RELEASE}; ${Build.MODEL})"
 private const val MAX_RETRY_COUNT = 3
 private const val RETRY_DELAY_MS = 3000L
 

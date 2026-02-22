@@ -37,7 +37,7 @@ class ModuleViewModel : ViewModel() {
     companion object {
         private const val TAG = "ModuleViewModel"
         private var modules by mutableStateOf<List<ModuleInfo>>(emptyList())
-        private const val CUSTOM_USER_AGENT = "SukiSU-Ultra/2.0"
+        private const val CUSTOM_USER_AGENT = "VortexSU/2.0"
     }
 
     // 模块大小缓存管理器

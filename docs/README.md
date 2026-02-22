@@ -33,7 +33,7 @@ Supported managers:
 - MamboSU
 - KowSU
 - RKSU
-- SukiSU
+- VortexSU
 - KernelSU-Next
 - WildKSU
 

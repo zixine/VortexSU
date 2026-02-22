@@ -31,13 +31,13 @@ config KSU_MULTI_MANAGER_SUPPORT
 		Enable multi KernelSU manager support
 
 config KPM
-	  bool "Enable SukiSU KPM"
+	  bool "Enable VortexSU KPM"
 	  depends on KSU && 64BIT
 	  select KALLSYMS
 	  select KALLSYMS_ALL
 	  default n
 	  help
-		Enabling this option will activate the KPM feature of SukiSU.
+		Enabling this option will activate the KPM feature of VortexSU.
 		This option is suitable for scenarios where you need to force KPM to be enabled.
 		but it may affect system stability.
 

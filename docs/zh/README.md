@@ -1,10 +1,10 @@
 # VortexSU
-<img align='right' src='SukiSU-mini.svg' width='220px' alt="sukisu logo">
+<img align='right' src='VortexSU-mini.svg' width='220px' alt="sukisu logo">
 
 
 [English](../README.md) | **简体中文** | [日本語](../ja/README.md) | [Türkçe](../tr/README.md) | [Русский](../ru/README.md)
 
-一个 [`SukiSU-Ultra/SukiSU-Ultra`](https://github.com/SukiSU-Ultra/SukiSU-Ultra) 的下游分支,添加了一些有趣的变更，且更加稳定。
+一个 [`VortexSU/VortexSU`](https://github.com/VortexSU/VortexSU) 的下游分支,添加了一些有趣的变更，且更加稳定。
 
 [![最新发行](https://img.shields.io/github/v/release/VortexSU/VortexSU?label=Release&logo=github)](https://github.com/VortexSU/VortexSU/releases/latest)
 [![频道](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/VortexSU)
@@ -39,14 +39,14 @@ curl -LSs "https://raw.githubusercontent.com/VortexSU/VortexSU/main/kernel/setup
 
 ## 参与翻译
 
-要将 SukiSU 翻译成您的语言，或完善现有的翻译，请使用 [Crowdin](https://crowdin.com/project/VortexSU).
+要将 VortexSU 翻译成您的语言，或完善现有的翻译，请使用 [Crowdin](https://crowdin.com/project/VortexSU).
 
 ## KPM 支持
 
 - 基于 KernelPatch 开发，移除了与 KernelSU 重复的功能。
 - 正在进行（WIP）：通过集成附加功能来扩展 APatch 兼容性，以确保跨不同实现的兼容性。
 
-**开源仓库**: [https://github.com/ShirkNeko/SukiSU_KernelPatch_patch](https://github.com/ShirkNeko/SukiSU_KernelPatch_patch)
+**开源仓库**: [https://github.com/ShirkNeko/VortexSU_KernelPatch_patch](https://github.com/ShirkNeko/VortexSU_KernelPatch_patch)
 
 **KPM 模板**: [https://github.com/udochina/KPM-Build-Anywhere](https://github.com/udochina/KPM-Build-Anywhere)
 
@@ -64,7 +64,7 @@ curl -LSs "https://raw.githubusercontent.com/VortexSU/VortexSU/main/kernel/setup
 
 ## 赞助
 
-- [ShirkNeko](https://afdian.com/a/shirkneko) (SukiSU 主要维护者)
+- [ShirkNeko](https://afdian.com/a/shirkneko) (VortexSU 主要维护者)
 - [weishu](https://github.com/sponsors/tiann) (KernelSU 作者)
 
 <details>
@@ -81,10 +81,10 @@ curl -LSs "https://raw.githubusercontent.com/VortexSU/VortexSU/main/kernel/setup
 
 ## 鸣谢
 
-- [SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)：上游
+- [VortexSU/VortexSU](https://github.com/VortexSU/VortexSU)：上游
 
 <details>
-<summary>SukiSU 的鸣谢</summary>
+<summary>VortexSU 的鸣谢</summary>
 
 - [KernelSU](https://github.com/tiann/KernelSU): 上游
 - [MKSU](https://github.com/5ec1cff/KernelSU): 魔法坐骑支持

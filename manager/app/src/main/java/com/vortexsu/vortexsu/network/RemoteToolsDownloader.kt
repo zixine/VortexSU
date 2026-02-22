@@ -154,7 +154,7 @@ class RemoteToolsDownloader(
                 connectTimeout = CONNECTION_TIMEOUT
                 readTimeout = READ_TIMEOUT
                 requestMethod = "GET"
-                setRequestProperty("User-Agent", "SukiSU-KPM-Downloader/1.0")
+                setRequestProperty("User-Agent", "VortexSU-KPM-Downloader/1.0")
                 setRequestProperty("Accept", "*/*")
                 setRequestProperty("Connection", "close")
             }
