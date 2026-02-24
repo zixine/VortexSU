@@ -61,6 +61,11 @@
 #define EXPECTED_HASH_VORTEX                                                    \
     "2b8a1087ec94d19ed3c0aa468fb6dcc3e0af5ea0d683bd64da20051847184e8e"
 
+// zixine/ZixineSu (zixineSu)
+#define EXPECTED_SIZE_ZIXINE 0x362
+#define EXPECTED_HASH_ZIXINE                                                    \
+    "ccec15172719e47b707058f8e437be9a5d5bc778165fdcb80435f2d429ef029a"
+
 // Dynamic Sign
 #define EXPECTED_SIZE_OTHER 0x300
 #define EXPECTED_HASH_OTHER                                                    \
