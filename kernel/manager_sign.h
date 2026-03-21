@@ -71,6 +71,11 @@
 #define EXPECTED_HASH_KAMISU                                                   \
     "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566"
 
+// zixine/ZixineSu
+#define EXPECTED_SIZE_ZIXINESU 0x376
+#define EXPECTED_HASH_ZIXINESU                                                   \
+    "abf7a7bead4a924028aba80020b7b44d7e3b734c942eae280090b423e6908833"
+
 // Dynamic Sign
 #define EXPECTED_SIZE_OTHER 0x300
 #define EXPECTED_HASH_OTHER                                                    \
