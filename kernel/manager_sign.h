@@ -73,7 +73,7 @@
 
 // zixine/ZixineSu
 #define EXPECTED_SIZE_ZIXINESU 0x376
-#define EXPECTED_HASH_ZIXINESU                                                   \
+#define EXPECTED_HASH_ZIXINESU \
     "abf7a7bead4a924028aba80020b7b44d7e3b734c942eae280090b423e6908833"
 
 // Dynamic Sign
